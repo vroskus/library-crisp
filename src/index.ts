@@ -11,8 +11,8 @@ declare global {
 }
 
 type $User = {
-  Name: string;
   Email: string;
+  Name: string;
 };
 
 type $Attr = {
