@@ -10,17 +10,17 @@ declare global {
   }
 }
 
-type $User = {
-  Email: string;
-  Name: string;
-};
+export type $Config = Config;
 
 type $Attr = {
   key: string;
   value: string;
 };
 
-export type $Config = Config;
+type $User = {
+  Email: string;
+  Name: string;
+};
 
 class CrispService<C extends Config> {
   websiteId: string;

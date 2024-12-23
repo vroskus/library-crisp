@@ -20,9 +20,9 @@
     "test:e2e": "echo 'No tests'"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/node": "^22.4.1",
-    "@vroskus/eslint-config": "^1.0.11",
-    "typescript": "^5.4.5"
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@vroskus/eslint-config": "^1.0.18",
+    "typescript": "^5.7.2"
   }
 }
