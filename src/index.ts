@@ -33,7 +33,8 @@ class CrispService<C extends Config> {
 
   init(): void {
     if (window && this.websiteId !== '') {
-      window.$crisp = [];
+      window.$crisp = [
+      ];
       window.CRISP_WEBSITE_ID = this.websiteId;
 
       const d = document;
@@ -50,8 +51,16 @@ class CrispService<C extends Config> {
     Name,
   }: $User): void {
     if (window && this.websiteId !== '') {
-      window.$crisp.push(['set', 'user:nickname', Name]);
-      window.$crisp.push(['set', 'user:email', Email]);
+      window.$crisp.push([
+        'set',
+        'user:nickname',
+        Name,
+      ]);
+      window.$crisp.push([
+        'set',
+        'user:email',
+        Email,
+      ]);
     }
   }
 
@@ -60,7 +69,18 @@ class CrispService<C extends Config> {
     value,
   }: $Attr): void {
     if (window && this.websiteId !== '') {
-      window.$crisp.push(['set', 'session:data', [[[key, value]]]]);
+      window.$crisp.push([
+        'set',
+        'session:data',
+        [
+          [
+            [
+              key,
+              value,
+            ],
+          ],
+        ],
+      ]);
     }
   }
 }
